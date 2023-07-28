@@ -8,7 +8,7 @@
           <div class="card-body">
             <h5 class="card-title">Miód {{ product.type }}</h5>
             <p class="card-text">Pozostało {{ product.quantity }} sztuk.</p>
-            <a href="#" class="btn btn-primary">Dodaj do koszyka</a>
+              <router-link class="btn btn-primary" :to="`/product/${product.type}`">Dodaj do koszyka</router-link>
           </div>
         </div>
       </div>
@@ -28,7 +28,6 @@ export default {
   },
   methods: {
     fetchEntries() {
-      // Replace 'YOUR_BACKEND_API_ENDPOINT' with the actual API endpoint URL
       fetch('http://localhost:8000/api/stock')
           .then(response => response.json())
           .then(data => {

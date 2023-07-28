@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import StockList from "./components/StockGrid.vue";
-import Gallery from "./components/Gallery.vue";
 </script>
 
 <template>
-  <main>
-    <StockList />
-  </main>
-  <Gallery />
+  <h1>---------------------</h1>
+    <router-view>
+    </router-view>
+  <h1>---------------------</h1>
 </template>
 
 <style scoped>
